@@ -15,7 +15,7 @@ const forecast = (lat, long, callback) => {
         {
             //set undefined because it does not have a value for data
             callback(undefined, JSON.parse(body).current.weather_descriptions[0]+ '. It is currently ' +
-            JSON.parse(body).current.temperature + ' degrees out. There is a ' + JSON.parse(body).current.precip + '% chance of rain')
+            JSON.parse(body).current.temperature + ' degrees out. There is a ' + JSON.parse(body).current.precip + '% chance of rain. There is an UV index of '+ JSON.parse(body).current.uv_index)
 
         }
     })
